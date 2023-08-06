@@ -21,7 +21,19 @@ class ViewController: UIViewController {
     @IBAction func keyPressed(_ sender: UIButton) {
         // gather the pressed button's title value
         guard let pressed = sender.titleLabel?.text else {return}
+        
+        // here we call the playSound function with pressed key
         playSound(fileName: pressed)
+        
+        // on click we change the opacity of button in 0.2 sec
+        UIView.animate(withDuration: 0.2) {
+            sender.alpha = 0.5
+        }
+        
+        // here we put an async callback to restore opacity back to normal after 0.2 sec
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
+            sender.alpha = 1.0
+        }
     }
     
     func playSound(fileName : String) {
