@@ -16,33 +16,12 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+   
     
-    @IBAction func cTapped(_ sender: UIButton) {
-        playSound(fileName: "C")
-    }
-    
-    @IBAction func dTapped(_ sender: UIButton) {
-        playSound(fileName: "D")
-    }
-    
-    @IBAction func eTapped(_ sender: UIButton) {
-        playSound(fileName: "E")
-    }
-    
-    @IBAction func fTapped(_ sender: UIButton) {
-        playSound(fileName: "F")
-    }
-    
-    @IBAction func gTapped(_ sender: UIButton) {
-        playSound(fileName: "G")
-    }
-    
-    @IBAction func aTapped(_ sender: UIButton) {
-        playSound(fileName: "A")
-    }
-    
-    @IBAction func bTapped(_ sender: UIButton) {
-        playSound(fileName: "B")
+    @IBAction func keyPressed(_ sender: UIButton) {
+        // gather the pressed button's title value
+        guard let pressed = sender.titleLabel?.text else {return}
+        playSound(fileName: pressed)
     }
     
     func playSound(fileName : String) {
