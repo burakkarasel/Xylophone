@@ -13,7 +13,26 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
-
+    
+    @IBAction func cTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func dTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func eTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func fTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func gTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func aTapped(_ sender: UIButton) {
+    }
+    
+    @IBAction func bTapped(_ sender: UIButton) {
+    }
 }
 
